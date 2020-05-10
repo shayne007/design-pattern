@@ -9,7 +9,7 @@ public class DigitButton extends Button{
 
     @Override
     void onPress() {
-        System.out.println("specific behavior for digit button");
+        System.out.println("specific structure for digit button");
     }
 
 }

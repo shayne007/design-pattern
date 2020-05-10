@@ -12,7 +12,7 @@ public class SendButton extends Button{
 
     @Override
     void onPress() {
-        System.out.println("specific behavior for send button");
+        System.out.println("specific structure for send button");
     }
 
 }
