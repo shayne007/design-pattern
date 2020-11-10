@@ -12,10 +12,10 @@ Use the Composite pattern when
 
  - you want to represent part-whole hierarchies of objects.
  - you want clients to be able to ignore the difference between compositions of objects and individual objects. Clients
-  will treat all objects in the composite structure uniformly.
-  
+    will treat all objects in the composite structure uniformly.
+
 #### 示例
  - 图形、容器、图画
  - 组织结构、部门、员工
+ - 
  - 文件系统节点、目录、文件
- 

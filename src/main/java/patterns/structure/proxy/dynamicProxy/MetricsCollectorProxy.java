@@ -1,14 +1,18 @@
+/*
 package patterns.structure.proxy.dynamicProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+*/
 /**
  * @author fengsy
  * @date 5/2/20
  * @Description
  */
+/*
+
 
 public class MetricsCollectorProxy {
     private MetricsCollector metricsCollector;
@@ -46,4 +50,4 @@ public class MetricsCollectorProxy {
 
     //MetricsCollectorProxy使用举例
     MetricsCollectorProxy proxy = new MetricsCollectorProxy();
-    IUserController userController = (IUserController) proxy.createProxy(new UserController());
+    IUserController userController = (IUserController) proxy.createProxy(new UserController());*/

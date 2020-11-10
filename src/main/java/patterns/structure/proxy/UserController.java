@@ -1,10 +1,13 @@
+/*
 package patterns.structure.proxy;
 
+*/
 /**
  * @author fengsy
  * @date 5/2/20
  * @Description
- */
+ *//*
+
 
 public class UserController {
     //...省略其他属性和方法...
@@ -35,4 +38,4 @@ public class UserController {
 
         //...返回UserVo数据...
     }
-}
+}*/
