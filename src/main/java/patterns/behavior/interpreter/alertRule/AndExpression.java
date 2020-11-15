@@ -12,6 +12,10 @@ import java.util.Map;
 public class AndExpression implements Expression {
     private List<Expression> expressions = new ArrayList<>();
 
+    public void setExpressions(List<Expression> expressions) {
+        this.expressions = expressions;
+    }
+
     public AndExpression(String strAndExpression) {
         String[] strExpressions = strAndExpression.split("&&");
         for (String strExpr : strExpressions) {

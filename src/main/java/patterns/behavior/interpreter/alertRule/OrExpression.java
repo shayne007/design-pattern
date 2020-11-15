@@ -15,7 +15,8 @@ public class OrExpression implements Expression {
     public OrExpression(String strOrExpression) {
         String[] andExpressions = strOrExpression.split("\\|\\|");
         for (String andExpr : andExpressions) {
-            expressions.add(new AndExpression(andExpr));
+            Expression expression = new AndExpression(andExpr);
+            expressions.add(expression);
         }
     }
 
