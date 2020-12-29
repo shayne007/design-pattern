@@ -18,7 +18,7 @@ public class CacheDemo {
                 .maximumSize(1000)
                 .expireAfterWrite(10, TimeUnit.MINUTES)
                 .build();
-
+        "".length();
         cache.put("key1", "value1");
         String value = cache.getIfPresent("key1");
         System.out.println(value);

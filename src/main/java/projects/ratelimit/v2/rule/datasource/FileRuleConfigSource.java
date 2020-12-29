@@ -39,6 +39,7 @@ public class FileRuleConfigSource implements RuleConfigSource {
     @Override
 
     public RuleConfig load() {
+        new String("abc").intern();
         for (String extension : SUPPORT_EXTENSIONS) {
             InputStream in = null;
             try {
