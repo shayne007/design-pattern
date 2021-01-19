@@ -8,7 +8,7 @@ package patterns.create.builder.builder_bad;
 public class Demo {
     public static void main(String[] args) {
         // 参数太多，导致可读性差、参数可能传递错误
-        new ResourcePoolConfig("",11,11,11);
+        new ResourcePoolConfig("fsy",11,11,11);
 
 
         // ResourcePoolConfigV2使用举例

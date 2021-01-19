@@ -6,6 +6,7 @@ import org.yaml.snakeyaml.Yaml;
 import projects.ratelimit.v1.rule.ApiLimit;
 import projects.ratelimit.v1.rule.RateLimitRule;
 import projects.ratelimit.v1.rule.RuleConfig;
+import projects.ratelimit.v2.alg.FixedTimeWinRateLimitAlg;
 
 import java.io.IOException;
 import java.io.InputStream;
