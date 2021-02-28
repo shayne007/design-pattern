@@ -1,4 +1,4 @@
-package com.xzg.cd.rpc.demo.server;
+package patterns.structure.proxy.rpc.demo.server;
 
 public interface CalculatorService {
 

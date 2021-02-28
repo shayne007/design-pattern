@@ -1,17 +1,14 @@
-/*
 package patterns.structure.proxy.dynamicProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-*/
 /**
  * @author fengsy
  * @date 5/2/20
  * @Description
- */
-/*
+ * */
 
 
 public class MetricsCollectorProxy {
@@ -41,13 +38,19 @@ public class MetricsCollectorProxy {
             long endTimeStamp = System.currentTimeMillis();
             long responseTime = endTimeStamp - startTimestamp;
             String apiName = proxiedObject.getClass().getName() + ":" + method.getName();
-            RequestInfo requestInfo = new RequestInfo(apiName, responseTime, startTimestamp);
-            metricsCollector.recordRequest(requestInfo);
+            System.out.println(apiName);
+//            RequestInfo requestInfo = new RequestInfo(apiName, responseTime, startTimestamp);
+//            metricsCollector.recordRequest(requestInfo);
             return result;
         }
     }
+
+    public static void main(String[] args) {
+        //MetricsCollectorProxy使用举例
+        MetricsCollectorProxy proxy = new MetricsCollectorProxy();
+        IUserController userController = (IUserController) proxy.createProxy(new UserController());
+        userController.login("137","abc");
+
+    }
 }
 
-    //MetricsCollectorProxy使用举例
-    MetricsCollectorProxy proxy = new MetricsCollectorProxy();
-    IUserController userController = (IUserController) proxy.createProxy(new UserController());*/

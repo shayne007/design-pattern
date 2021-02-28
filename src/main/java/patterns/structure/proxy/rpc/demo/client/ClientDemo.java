@@ -1,6 +1,7 @@
-package com.xzg.cd.rpc.demo.client;
+package patterns.structure.proxy.rpc.demo.client;
 
-import com.xzg.cd.rpc.RpcClient;
+
+import patterns.structure.proxy.rpc.RpcClient;
 
 public class ClientDemo {
 

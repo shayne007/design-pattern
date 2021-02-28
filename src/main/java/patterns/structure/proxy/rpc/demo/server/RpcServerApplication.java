@@ -1,6 +1,7 @@
-package com.xzg.cd.rpc.demo.server;
+package patterns.structure.proxy.rpc.demo.server;
 
-import com.xzg.cd.rpc.RpcServer;
+
+import patterns.structure.proxy.rpc.RpcServer;
 
 public class RpcServerApplication {
 

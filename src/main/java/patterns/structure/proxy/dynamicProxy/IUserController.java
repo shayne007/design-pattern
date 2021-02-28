@@ -5,5 +5,8 @@ package patterns.structure.proxy.dynamicProxy;
  * @date 1/19/21
  * @Description
  */
-public class IUserController {
+public interface IUserController {
+     String login(String telephone, String password);
+     String register(String telephone, String password);
+
 }

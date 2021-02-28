@@ -5,10 +5,10 @@ package patterns.behavior.observer.weather;
  * @date 2/21/21
  * @Description
  */
-public class WheatherDisplay1 implements Observer {
+public class WheatherDisplay2 implements Observer {
     private float temperate;
 
-    public WheatherDisplay1(Subject whether) {
+    public WheatherDisplay2(Subject whether) {
         whether.registerObserver(this);
     }
 
@@ -20,6 +20,6 @@ public class WheatherDisplay1 implements Observer {
     }
 
     public void display() {
-        System.out.println("display1****; " + this.temperate);
+        System.out.println("display2****; " + this.temperate);
     }
 }

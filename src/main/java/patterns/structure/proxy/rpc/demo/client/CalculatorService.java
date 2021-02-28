@@ -1,7 +1,7 @@
-package com.xzg.cd.rpc.demo.client;
+package patterns.structure.proxy.rpc.demo.client;
 
 public interface CalculatorService {
 
-  int add(int a, int b);
+    int add(int a, int b);
 
 }
