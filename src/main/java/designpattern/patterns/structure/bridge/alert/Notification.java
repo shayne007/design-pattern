@@ -1,4 +1,4 @@
-package designpattern.principles.openClosed.alert.alert_better;
+package designpattern.patterns.structure.bridge.alert;
 
 import java.util.List;
 
