@@ -12,8 +12,14 @@ public class IdGenerator {
     private AtomicLong id = new AtomicLong(0);
     private static IdGenerator instance;
 
-    private IdGenerator() {}
+    private IdGenerator() {
+    }
 
+    /**
+     * Singleton Double Check
+     *
+     * @return
+     */
     public static IdGenerator getInstance() {
         if (instance == null) {
             // 此处为类级别的锁
