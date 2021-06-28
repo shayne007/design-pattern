@@ -22,7 +22,7 @@ public class SecurityTransporter extends Transporter {
     }
 
     @Override
-    public Response sendRequest(Request request) throws NoAuthorizationRuntimeException {
+    public Response sendRequest(Request request) throws ParentRuntimeException {
         if (StringUtils.isBlank(appId) || StringUtils.isBlank(appToken)) {
             // 子类中抛出异常，不满足里氏替换原则
             // 子类替换父类传递进 demoFunction 函数之后，整个程序的逻辑行为有了改变。

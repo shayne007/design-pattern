@@ -17,8 +17,11 @@ public class Transporter {
 
     }
 
-    public Response sendRequest(Request request) throws NoAuthorizationRuntimeException {
+    public Response sendRequest(Request request) throws ParentRuntimeException {
         // ...use httpClient to send request
+        if (true) {
+            throw new ParentRuntimeException();
+        }
         return null;
     }
 }

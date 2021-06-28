@@ -5,11 +5,12 @@ package designpattern.principles.lod.download;
  * @date 3/4/21
  * @Description
  */
-class HtmlRequest {
+public class HtmlRequest {
     private String address;
     private String content;
 
-    HtmlRequest(String url) {}
+    public HtmlRequest(String url) {
+    }
 
     public String getAddress() {
         return this.address;

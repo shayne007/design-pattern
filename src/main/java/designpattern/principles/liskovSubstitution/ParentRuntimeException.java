@@ -5,5 +5,5 @@ package designpattern.principles.liskovSubstitution;
  * @date 3/3/21
  * @Description
  */
-public class NoAuthorizationRuntimeException extends ParentRuntimeException {
+public class ParentRuntimeException extends Throwable {
 }

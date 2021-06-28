@@ -4,11 +4,11 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author fengsy
- * @date 6/26/21
+ * @date 3/4/21
  * @Description
  */
 
-public class UserAuthenticator {
+public class UserAuthenticatorBetter {
     public void authenticate(String username, String password) {
         if (!isValidUsername(username)) {
             // ...throw InvalidUsernameException...
@@ -16,7 +16,7 @@ public class UserAuthenticator {
         if (!isValidPassword(password)) {
             // ...throw InvalidPasswordException...
         }
-        //...省略其他代码...
+        // ...省略其他代码...
     }
 
     private boolean isValidUsername(String username) {
@@ -33,16 +33,15 @@ public class UserAuthenticator {
         if (!StringUtils.isAllLowerCase(username)) {
             return false;
         }
-        // contains only a~z,0~9,dot
-        for (int i = 0; i < length; ++i) {
-            char c = username.charAt(i);
-            if (!(c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.') {
-                return false;
-            }
-        }
-        return true;
+        return onlyContains(username);
     }
 
+    /**
+     * 校验密码的逻辑虽然与校验用户名的逻辑重复，但是语义上不重复
+     *
+     * @param password
+     * @return
+     */
     private boolean isValidPassword(String password) {
         // check not null, not empty
         if (StringUtils.isBlank(password)) {
@@ -57,9 +56,15 @@ public class UserAuthenticator {
         if (!StringUtils.isAllLowerCase(password)) {
             return false;
         }
+
+        return onlyContains(password);
+    }
+
+    private boolean onlyContains(String str) {
         // contains only a~z,0~9,dot
+        int length = str.length();
         for (int i = 0; i < length; ++i) {
-            char c = password.charAt(i);
+            char c = str.charAt(i);
             if (!(c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.') {
                 return false;
             }

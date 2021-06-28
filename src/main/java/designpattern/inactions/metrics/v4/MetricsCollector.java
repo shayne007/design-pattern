@@ -1,15 +1,13 @@
 package designpattern.inactions.metrics.v4;
 
-import java.util.concurrent.Executors;
-
-import org.apache.commons.lang3.StringUtils;
-
 import com.google.common.eventbus.AsyncEventBus;
 import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
-
 import designpattern.inactions.metrics.v4.storage.MetricsStorage;
 import designpattern.inactions.metrics.v4.storage.RedisMetricsStorage;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.concurrent.Executors;
 
 /**
  * @author fengsy

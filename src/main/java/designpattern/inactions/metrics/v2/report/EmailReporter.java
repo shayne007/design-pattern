@@ -1,5 +1,10 @@
 package designpattern.inactions.metrics.v2.report;
 
+import designpattern.inactions.metrics.v2.Aggregator;
+import designpattern.inactions.metrics.v2.RequestInfo;
+import designpattern.inactions.metrics.v2.RequestStat;
+import designpattern.inactions.metrics.v2.storage.MetricsStorage;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -8,11 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import designpattern.inactions.metrics.v2.Aggregator;
-import designpattern.inactions.metrics.v2.RequestInfo;
-import designpattern.inactions.metrics.v2.RequestStat;
-import designpattern.inactions.metrics.v2.storage.MetricsStorage;
 
 /**
  * @author fengsy
@@ -55,7 +55,7 @@ public class EmailReporter {
                 long endTimeInMillis = System.currentTimeMillis();
                 long startTimeInMillis = endTimeInMillis - durationInMillis;
                 Map<String, List<RequestInfo>> requestInfos =
-                    metricsStorage.getRequestInfos(startTimeInMillis, endTimeInMillis);
+                        metricsStorage.getRequestInfos(startTimeInMillis, endTimeInMillis);
                 Map<String, RequestStat> stats = new HashMap<>();
                 for (Map.Entry<String, List<RequestInfo>> entry : requestInfos.entrySet()) {
                     String apiName = entry.getKey();

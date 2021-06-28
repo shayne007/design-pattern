@@ -8,9 +8,10 @@ package designpattern.principles.lod.download;
 public class Html {
     private byte[] bytes;
 
-    Html() {}
+    public Html() {
+    }
 
-    Html(byte[] bytes) {
+    public Html(byte[] bytes) {
         this.bytes = bytes;
     }
 }

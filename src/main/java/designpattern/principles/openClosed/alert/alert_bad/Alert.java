@@ -23,6 +23,7 @@ public class Alert {
         if (errorCount > rule.getMatchedRule(api).getMaxErrorCount()) {
             notification.notify(NotificationEmergencyLevel.SEVERE, "...");
         }
+        //每次新增一个告警功能就要添加一个if语句，并且可能需要修改请求参数，比如增加timeoutCount
         long timeoutTps = timeoutCount / durationOfSeconds;
         if (timeoutTps > rule.getMatchedRule(api).getMaxTimeoutTps()) {
             notification.notify(NotificationEmergencyLevel.URGENCY, "...");

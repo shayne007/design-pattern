@@ -1,11 +1,11 @@
 package designpattern.refactor.idgenerator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Random;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author fengsy
@@ -30,13 +30,13 @@ public class IdGenerator {
             while (count < 8) {
                 int randomAscii = random.nextInt(122);
                 if (randomAscii >= 48 && randomAscii <= 57) {
-                    randomChars[count] = (char)('0' + (randomAscii - 48));
+                    randomChars[count] = (char) ('0' + (randomAscii - 48));
                     count++;
                 } else if (randomAscii >= 65 && randomAscii <= 90) {
-                    randomChars[count] = (char)('A' + (randomAscii - 65));
+                    randomChars[count] = (char) ('A' + (randomAscii - 65));
                     count++;
                 } else if (randomAscii >= 97 && randomAscii <= 122) {
-                    randomChars[count] = (char)('a' + (randomAscii - 97));
+                    randomChars[count] = (char) ('a' + (randomAscii - 97));
                     count++;
                 }
             }
@@ -46,5 +46,9 @@ public class IdGenerator {
         }
 
         return id;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(generate());
     }
 }

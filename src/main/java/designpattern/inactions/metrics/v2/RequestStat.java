@@ -13,7 +13,6 @@ public class RequestStat {
     private double p99ResponseTime;
     private long count;
     private long tps;
-    // ...省略getter/setter方法...
 
     public double getMaxResponseTime() {
         return maxResponseTime;

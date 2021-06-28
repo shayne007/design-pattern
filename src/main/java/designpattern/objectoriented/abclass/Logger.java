@@ -7,7 +7,7 @@ import java.util.logging.Level;
 public abstract class Logger {
     private String name;
     private boolean enabled;
-    private Level minPermittedLevel;
+    private Level minPermittedLevel;//日志级别
 
     public Logger(String name, boolean enabled, Level minPermittedLevel) {
         this.name = name;
@@ -17,8 +17,9 @@ public abstract class Logger {
 
     public void log(Level level, String message) throws IOException {
         boolean loggable = enabled && (minPermittedLevel.intValue() <= level.intValue());
-        if (!loggable)
+        if (!loggable) {
             return;
+        }
         doLog(level, message);
     }
 
