@@ -1,0 +1,12 @@
+<!--配置文件beans.xml：-->
+<beans>
+    <bean id="rateLimiter" class="designpattern.patterns.create.factory.coreDIcontainer.beans.RateLimiter">
+        <constructor-arg ref="redisCounter"/>
+    </bean>
+
+    <bean id="redisCounter" class="cdesignpattern.patterns.create.factory.coreDIcontainer.beans.RedisCounter"
+          scope="singleton" lazy-init="true">
+        <constructor-arg type="String" value="127.0.0.1"/>
+        <constructor-arg type="int" value="1234"/>
+    </bean>
+</beans>
