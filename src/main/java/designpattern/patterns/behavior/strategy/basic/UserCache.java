@@ -6,9 +6,13 @@ package designpattern.patterns.behavior.strategy.basic;
  * @Description
  */
 public class UserCache {
-    private Strategy strategy;
+    private EvictionStrategy strategy;
 
-    public UserCache(Strategy strategy) {
+    public UserCache(EvictionStrategy strategy) {
         this.strategy = strategy;
+    }
+
+    public void performEviction() {
+        this.strategy.algorithmInterface();
     }
 }

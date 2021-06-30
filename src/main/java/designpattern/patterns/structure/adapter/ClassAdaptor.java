@@ -5,7 +5,7 @@ package designpattern.patterns.structure.adapter;
  * @date 3/11/21
  * @Description
  */
-public class Adaptor extends Adaptee implements ITarget {
+public class ClassAdaptor extends Adaptee implements ITarget {
     @Override
     public void f1() {
         super.fa();

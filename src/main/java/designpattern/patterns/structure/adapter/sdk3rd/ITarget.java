@@ -1,4 +1,4 @@
-package designpattern.patterns.structure.adapter.sdk3;
+package designpattern.patterns.structure.adapter.sdk3rd;
 
 // 使用适配器模式进行重构
 public interface ITarget {

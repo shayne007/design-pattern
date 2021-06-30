@@ -14,6 +14,7 @@ public class NormalNotification extends Notification {
 
     @Override
     public void notify(String message) {
+        System.out.println("normal notification prepare to send...");
         msgSender.send(message);
     }
 }

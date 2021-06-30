@@ -5,7 +5,6 @@ package designpattern.patterns.behavior.observer.register;
  * @date 3/16/21
  * @Description
  */
-public class PromotionService {
-    public void issueNewUserExperienceCash(long userId) {
-    }
+public interface PromotionService {
+    public void issueNewUserExperienceCash(long userId);
 }

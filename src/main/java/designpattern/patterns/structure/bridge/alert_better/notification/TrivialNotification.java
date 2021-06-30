@@ -14,6 +14,7 @@ public class TrivialNotification extends Notification {
 
     @Override
     public void notify(String message) {
+        System.out.println("trivial notification prepare to send...");
         msgSender.send(message);
     }
 }

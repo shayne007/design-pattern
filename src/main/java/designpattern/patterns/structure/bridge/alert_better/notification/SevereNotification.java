@@ -14,6 +14,8 @@ public class SevereNotification extends Notification {
 
     @Override
     public void notify(String message) {
+
+        System.out.println("severe notification prepare to send...");
         msgSender.send(message);
     }
 }

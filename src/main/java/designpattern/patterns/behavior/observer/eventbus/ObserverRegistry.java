@@ -1,5 +1,7 @@
 package designpattern.patterns.behavior.observer.eventbus;
 
+import com.google.common.base.Preconditions;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,8 +11,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CopyOnWriteArraySet;
-
-import com.google.common.base.Preconditions;
 
 /**
  * @author fengsy
@@ -41,7 +41,7 @@ public class ObserverRegistry {
         for (Map.Entry<Class<?>, CopyOnWriteArraySet<ObserverAction>> entry : registry.entrySet()) {
             Class<?> eventType = entry.getKey();
             Collection<ObserverAction> eventActions = entry.getValue();
-            if (postedEventType.isAssignableFrom(eventType)) {
+            if (eventType.isAssignableFrom(postedEventType)) {
                 matchedObservers.addAll(eventActions);
             }
         }
@@ -68,9 +68,9 @@ public class ObserverRegistry {
             if (method.isAnnotationPresent(Subscribe.class)) {
                 Class<?>[] parameterTypes = method.getParameterTypes();
                 Preconditions.checkArgument(parameterTypes.length == 1,
-                    "Method %s has @Subscribe annotation but has %s parameters."
-                        + "Subscriber methods must have exactly 1 parameter.",
-                    method, parameterTypes.length);
+                        "Method %s has @Subscribe annotation but has %s parameters."
+                                + "Subscriber methods must have exactly 1 parameter.",
+                        method, parameterTypes.length);
                 annotatedMethods.add(method);
             }
         }

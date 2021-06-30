@@ -11,5 +11,6 @@ import java.util.concurrent.Executor;
 public class AsyncEventBus extends EventBus {
     public AsyncEventBus(Executor executor) {
         super(executor);
+        System.out.println("初始化异步事件总线AsyncEventBus");
     }
 }

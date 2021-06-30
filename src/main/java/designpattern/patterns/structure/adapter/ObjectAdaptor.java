@@ -5,10 +5,10 @@ package designpattern.patterns.structure.adapter;
  * @date 3/11/21
  * @Description
  */
-public class Adaptor2 implements ITarget {
+public class ObjectAdaptor implements ITarget {
     private Adaptee adaptee;
 
-    public Adaptor2(Adaptee adaptee) {
+    public ObjectAdaptor(Adaptee adaptee) {
         this.adaptee = adaptee;
     }
 

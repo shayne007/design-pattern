@@ -1,8 +1,8 @@
-package designpattern.patterns.structure.adapter.sdk3;
+package designpattern.patterns.structure.adapter.sdk3rd;
 
 /**
  * 适配器类,命名不一定非得末尾带Adaptor
- * 
+ *
  * @author fengsy
  * @date 3/11/21
  * @Description
@@ -26,7 +26,7 @@ public class CDAdaptor extends CD implements ITarget {
 
     /**
      * this method used a wrapper class as a param
-     * 
+     *
      * @param paramsWrapper
      */
     @Override
