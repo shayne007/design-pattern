@@ -1,5 +1,6 @@
 package designpattern.patterns.behavior.iterator;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,8 +21,16 @@ public class Demo {
         Iterator iterator2 = names.iterator();
         iterator.next();
         iterator.remove();
-        iterator2.next();
+//        iterator2.next();
 
-
+        ArrayList<String> nameList = new ArrayList<>();
+        nameList.add("xzg");
+        nameList.add("wang");
+        nameList.add("zheng");
+        MyIterator<String> iter = new ArrayIterator(nameList);
+        while (iter.hasNext()) {
+            System.out.println(iter.curItem());
+            iter.next();
+        }
     }
 }
