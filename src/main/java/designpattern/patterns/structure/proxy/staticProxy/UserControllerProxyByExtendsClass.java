@@ -1,6 +1,6 @@
 package designpattern.patterns.structure.proxy.staticProxy;
 
-import designpattern.inactions.metrics.v4.RequestInfo;
+import designpattern.projectsInAction.metrics.v4.RequestInfo;
 import designpattern.patterns.structure.proxy.dynamicProxy.MetricsCollector;
 
 /**

@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-import designpattern.inactions.metrics.v4.RequestInfo;
+import designpattern.projectsInAction.metrics.v4.RequestInfo;
 import designpattern.patterns.structure.proxy.staticProxy.IUserController;
 import designpattern.patterns.structure.proxy.staticProxy.UserController;
 

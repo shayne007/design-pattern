@@ -1,12 +1,12 @@
 package designpattern.patterns.create.factory.coreDIcontainer;
 
-import designpattern.patterns.create.factory.coreDIcontainer.parsers.BeanConfigParser;
-import designpattern.patterns.create.factory.coreDIcontainer.parsers.BeanDefinition;
-import designpattern.patterns.create.factory.coreDIcontainer.parsers.XmlBeanConfigParser;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
+import designpattern.patterns.create.factory.coreDIcontainer.parsers.BeanConfigParser;
+import designpattern.patterns.create.factory.coreDIcontainer.parsers.BeanDefinition;
+import designpattern.patterns.create.factory.coreDIcontainer.parsers.XmlBeanConfigParser;
 
 /**
  * @author fengsy
@@ -18,13 +18,15 @@ public class ClassPathXmlApplicationContext implements ApplicationContext {
     private BeansFactory beansFactory;
     private BeanConfigParser beanConfigParser;
 
-    public ClassPathXmlApplicationContext(String configLocation) throws BeanCreationFailureException, NoSuchBeanDefinitionException {
+    public ClassPathXmlApplicationContext(String configLocation)
+        throws BeanCreationFailureException, NoSuchBeanDefinitionException {
         this.beansFactory = new BeansFactory();
         this.beanConfigParser = new XmlBeanConfigParser();
         loadBeanDefinitions(configLocation);
     }
 
-    private void loadBeanDefinitions(String configLocation) throws NoSuchBeanDefinitionException, BeanCreationFailureException {
+    private void loadBeanDefinitions(String configLocation)
+        throws NoSuchBeanDefinitionException, BeanCreationFailureException {
         InputStream in = null;
         try {
             in = this.getClass().getResourceAsStream("/" + configLocation);

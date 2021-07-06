@@ -1,6 +1,6 @@
 package designpattern.patterns.structure.proxy.dynamicProxy;
 
-import designpattern.inactions.metrics.v4.RequestInfo;
+import designpattern.projectsInAction.metrics.v4.RequestInfo;
 
 /**
  * @author fengsy
