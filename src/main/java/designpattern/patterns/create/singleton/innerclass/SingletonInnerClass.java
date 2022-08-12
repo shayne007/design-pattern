@@ -10,13 +10,16 @@ import java.util.List;
  */
 public final class SingletonInnerClass {
     public List<String> list;
-    private SingletonInnerClass(){
+
+    private SingletonInnerClass() {
         list = new ArrayList<>();
     }
-    private static class SingletonInnerClassInstance{
+
+    private static class SingletonInnerClassHolder {
         private static SingletonInnerClass INSTANCE = new SingletonInnerClass();
     }
-    public static SingletonInnerClass getInstance(){
-        return SingletonInnerClassInstance.INSTANCE;
+
+    public static SingletonInnerClass getInstance() {
+        return SingletonInnerClassHolder.INSTANCE;
     }
 }

@@ -1,9 +1,8 @@
-package designpattern.projectsInAction.ratelimit.v2.rule.datasource;
+package designpattern.projectsInAction.gatedlaunch.v1.rule.datasource;
 
-import designpattern.projectsInAction.ratelimit.v2.rule.RuleConfig;
-import designpattern.projectsInAction.ratelimit.v2.rule.parser.JsonRuleConfigParser;
-import designpattern.projectsInAction.ratelimit.v2.rule.parser.RuleConfigParser;
-import designpattern.projectsInAction.ratelimit.v2.rule.parser.YamlRuleConfigParser;
+import designpattern.projectsInAction.gatedlaunch.v1.rule.DarkRuleConfig;
+import designpattern.projectsInAction.gatedlaunch.v1.rule.parser.RuleConfigParser;
+import designpattern.projectsInAction.gatedlaunch.v1.rule.parser.YamlRuleConfigParser;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +22,7 @@ import java.util.Map;
 public class FileRuleConfigSource implements RuleConfigSource {
     private static final Logger log = LoggerFactory.getLogger(FileRuleConfigSource.class);
 
-    public static final String API_LIMIT_CONFIG_NAME = "ratelimiter-rule";
+    public static final String API_LIMIT_CONFIG_NAME = "dark-rule";
     private String configName;
     public static final String YAML_EXTENSION = "yaml";
     public static final String YML_EXTENSION = "yml";
@@ -37,7 +36,6 @@ public class FileRuleConfigSource implements RuleConfigSource {
     static {
         PARSER_MAP.put(YAML_EXTENSION, new YamlRuleConfigParser());
         PARSER_MAP.put(YML_EXTENSION, new YamlRuleConfigParser());
-        PARSER_MAP.put(JSON_EXTENSION, new JsonRuleConfigParser());
     }
 
     public FileRuleConfigSource() {
@@ -48,7 +46,7 @@ public class FileRuleConfigSource implements RuleConfigSource {
     }
 
     @Override
-    public RuleConfig load() {
+    public DarkRuleConfig load() {
         for (String extension : SUPPORT_EXTENSIONS) {
             InputStream in = null;
             try {
@@ -72,6 +70,7 @@ public class FileRuleConfigSource implements RuleConfigSource {
     }
 
     private String getFileNameByExt(String extension) {
-        return StringUtils.isEmpty(configName) ? API_LIMIT_CONFIG_NAME : configName + "." + extension;
+        String filename = (StringUtils.isEmpty(configName) ? API_LIMIT_CONFIG_NAME : configName) + "." + extension;
+        return filename;
     }
 }
