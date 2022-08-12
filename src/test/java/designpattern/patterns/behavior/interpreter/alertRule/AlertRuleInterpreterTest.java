@@ -34,10 +34,10 @@ class AlertRuleInterpreterTest {
 
     @Test
     void interpreter_should_not_alert() {
-        String rule = "api_error_per_minute == 100 || " +
-                "api_count_per_minute < 30 && " +
-                "system_resource_num > 100 && " +
-                "system_users_online == 88";
+        String rule = "(api_error_per_minute == 100) || " +
+                "(api_count_per_minute < 30 && " +
+                "(system_resource_num > 100 && " +
+                "system_users_online == 88))";
         interpreter = new AlertRuleInterpreter(rule);
         boolean alert = interpreter.interpret(stats);
         assertEquals(false, alert);

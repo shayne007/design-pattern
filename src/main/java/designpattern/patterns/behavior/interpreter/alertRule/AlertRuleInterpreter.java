@@ -11,10 +11,10 @@ public class AlertRuleInterpreter {
     private Expression expression;
 
     public AlertRuleInterpreter(String ruleExpression) {
-        this.expression = new OrExpression(ruleExpression);
+        this.expression = new BracketExpression(ruleExpression);
     }
 
-    public boolean interpret(Map stats) {
+    public boolean interpret(Map<String, Long> stats) {
         return expression.interpret(stats);
     }
 }
