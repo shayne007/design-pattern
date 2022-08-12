@@ -28,6 +28,6 @@ public class LessExpression implements Expression {
             return false;
         }
         long statValue = stats.get(key);
-        return statValue > value;
+        return statValue < value;
     }
 }

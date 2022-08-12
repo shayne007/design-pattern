@@ -1,4 +1,4 @@
-package designpattern.patterns.behavior.interpreter;
+package designpattern.patterns.behavior.interpreter.calculator;
 
 import java.util.Deque;
 import java.util.LinkedList;
