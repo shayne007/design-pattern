@@ -1,4 +1,4 @@
-package designpattern.patterns.behavior.interpreter.productFinder;
+package com.feng.dp.behavior.interpreter.productFinder;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

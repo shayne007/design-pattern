@@ -1,4 +1,4 @@
-package designpattern.patterns.behavior.interpreter.productFinder;
+package com.feng.dp.behavior.interpreter.productFinder;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

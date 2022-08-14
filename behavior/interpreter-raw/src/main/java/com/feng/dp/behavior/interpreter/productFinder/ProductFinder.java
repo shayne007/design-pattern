@@ -1,4 +1,4 @@
-package designpattern.patterns.behavior.interpreter.productFinder;
+package com.feng.dp.behavior.interpreter.productFinder;
 
 import java.util.List;
 import java.util.stream.Collectors;
