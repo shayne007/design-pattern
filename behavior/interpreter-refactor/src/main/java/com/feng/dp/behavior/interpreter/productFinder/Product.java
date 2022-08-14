@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @Description TODO
+ * @Description 产品类模型
  * @Author fengsy
  * @Date 8/13/22
  */

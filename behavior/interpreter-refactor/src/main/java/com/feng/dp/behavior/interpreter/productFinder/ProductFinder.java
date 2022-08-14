@@ -15,26 +15,8 @@ public class ProductFinder {
         this.repository = repository;
     }
 
-    public List<Product> byColor(Color colorToFind) {
-        return this.repository.productList.stream().filter(product -> product.getColor().equals(colorToFind))
-            .collect(Collectors.toList());
-    }
-
-    public List<Product> byPrice(float priceToFound) {
-        return this.repository.productList.stream().filter(product -> product.getPrice() == priceToFound)
-            .collect(Collectors.toList());
-    }
-
-    public List<Product> findByColorSizeAndBelowPrice(Color color, ProductSize size, float price) {
-        return this.repository.productList.stream()
-            .filter(
-                product -> product.getColor().equals(color) && product.getSize() == size && product.getPrice() < price)
-            .collect(Collectors.toList());
-    }
-
-    public List<Product> findBelowPriceAvoidingAColor(float price, Color color) {
-        return this.repository.productList.stream()
-            .filter(product -> product.getPrice() < price && !product.getColor().equals(color))
+    public List<Product> selectBy(Specification spec) {
+        return this.repository.productList.stream().filter(product -> spec.isSatisfiedBy(product))
             .collect(Collectors.toList());
     }
 }
