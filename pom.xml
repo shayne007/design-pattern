@@ -13,7 +13,7 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.fsy</groupId>
+    <groupId>com.feng</groupId>
     <artifactId>design-pattern</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>design-pattern-root</name>
