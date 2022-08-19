@@ -7,7 +7,13 @@ package com.feng.dp.factory;
  */
 public class Parser {
 
-    public boolean shouldDecodeNodes() {
-        return false;
+    public NodeFactory nodeFactory = new NodeFactory();
+
+    public NodeFactory getNodeFactory() {
+        return nodeFactory;
+    }
+
+    public void setNodeFactory(NodeFactory nodeFactory) {
+        this.nodeFactory = nodeFactory;
     }
 }

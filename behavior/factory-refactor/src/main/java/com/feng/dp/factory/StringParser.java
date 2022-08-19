@@ -7,11 +7,11 @@ package com.feng.dp.factory;
  */
 public class StringParser {
     Parser parser;
+    StringBuilder textBuffer = new StringBuilder();
+    int textBegin = 0;
+    int textEnd = 0;
 
     public Node find() {
-        StringBuilder textBuffer = new StringBuilder();
-        int textBegin = 0;
-        int textEnd = 0;
-        return StringNode.createStringNode(textBuffer, textBegin, textEnd, parser.shouldDecodeNodes());
+        return parser.getNodeFactory().createStringNode(textBuffer, textBegin, textEnd);
     }
 }
