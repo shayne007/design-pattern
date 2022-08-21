@@ -38,8 +38,9 @@ public class Parser {
             @Override
             public Node nextNode() {
                 hasMoreNodes = false;
-                return new StringNode(new StringBuffer(text), 0, 0, decoding, removeEscapeCharacters);
+                return new StringParser().find(text, Parser.this.decoding, Parser.this.removeEscapeCharacters);
             }
         };
     }
+
 }

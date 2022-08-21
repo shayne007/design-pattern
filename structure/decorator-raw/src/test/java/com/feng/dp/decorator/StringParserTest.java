@@ -21,7 +21,7 @@ public class StringParserTest {
 
         Parser parser = Parser.createParser(ENCODE_TITLE);
         parser.setNodeDecoding(true);
-        parser.setRemoveEscapeCharacters(false);
+        parser.setRemoveEscapeCharacters(true);
         NodeIterator nodes = parser.elements();
         while (nodes.hasMoreNodes()) {
             decodedContent.append(Translate.decode(nodes.nextNode().toPlainTextString()));
